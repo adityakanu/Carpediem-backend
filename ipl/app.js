@@ -4,7 +4,7 @@ const request = require("request");
 const https = require("https");
 
 const app = express();
-const PORT = 5000;
+// const PORT = 5000;
 // const isDev = process.env.NODE_ENV !== "production";
 
 app.use(express.static("public"));
@@ -52,6 +52,9 @@ app.post("/", function (req, res) {
     request.end();
 });
 
+app.listen(app.get("port"), () => {
+    console.log("Express server listening on port " + app.get("port"));
+});
 // app.listen(PORT, function () {
 //     console.error(
 //         `Node ${
@@ -59,10 +62,9 @@ app.post("/", function (req, res) {
 //         }: listening on port ${PORT}`
 //     );
 // });
-app.listen(PORT, function () {
-    console.log("Server is Online");
-});
-
+// app.listen(PORT, function () {
+//     console.log("Server is Online");
+// });
 //Api Key
 // f53a5c68faa0830aa2a5e89ae58b32e8-us5
 
