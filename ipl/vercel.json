@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            // "srs": "./app.js",
+            "srs": "./index.js",
             "use": "@vercel/node"
         }
     ],
